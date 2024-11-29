@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.kingdom{
+    flex-grow:0;
+}
+
+@media only screen and (min-width:899px) {
+    .hambger{
+display: none;
+
+    }
+}
+
+.hambger{
+   background-color: red;
+   
+}
+
+@media only screen and (max-width:899px) {
+    .favour{
+display: none;
+
+    }
+}
+
+/* MEDIA QUERY IS HERE */
+/* stye the image */
+
+
+
+
+.card{ 
+display: inline-flex; 
+
+} 
+.section { 
+    display: flex; 
+     max-width: 100%; 
+    padding-left: 20rem;
+     padding-right: 20rem; 
+     color: #ccc;
+
+} 
+
+ .card1, card2{
+    display: flex;
+ justify-content: center; 
+ } 
+.card-text, card-title{ 
+     display: flex; 
+     align-content: center; 
+} 
+ .h5{ 
+     align-items: center; 
+    display: flex; 
+} 
+.p1{
+    align-items: center;
+}
+.btn{
+    background-color: aliceblue;
+    font-size: 16px;
+    cursor: pointer;
+    flex-grow: calc(3);
+    box-sizing: border-box;
+}
+.btn:hover{
+color: red;
+transition-duration: 1s;
+}
+.wallet{
+    margin-right: 50%;
+}
+.card-img{
+    align-items: end;
+}
+
+

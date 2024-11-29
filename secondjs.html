@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xyzblog Javascript Tutorial</title>
+</head>
+<body>
+    <!-- <h1>xyzblog javascript Tutorial</h1> -->
+     <!-- <div id="myDoubleClickable">Double-click me!</div> -->
+    <!-- CHANGING THE TEXT OF AN HTML ELEMENT-->
+    <!-- <p id="myParagraph">Hello xyzblog!</p> -->
+     <!-- HOW TO CHANGE THE STYLE OF AN HTML ELEMENT -->
+     <!-- <P id="myParagraph" style="color: rgb(68, 19, 213);">Hello xyzblog</P> -->
+    <!-- ADDING AN EVENT LISTENER TO AN HTML ELEMENT -->
+    <!-- <button id="myButton">CLICK ME!</button>  -->
+     <!--CREATING A NEW HTML ELEMENT  -->
+    <!-- <div id="myDiv"> -->
+        <!-- <p>Hello, welcome to xyzblog javascript tutorial</p> -->
+    <!-- </div>  -->
+     <!-- REMOVING AN HTML ELEMENT FROM A DOCUMENT -->
+    <!-- <div id="myDiv"> -->
+     <!-- <p id="myParagraph">Hello xyzyblog!</p> -->
+    <!-- </div> -->
+    <!-- CHANGING THE ATTRIBUTES OF AN HTML ELEMENT -->
+    <!-- <a id="myLink" href="login.html">Visit login.html</a> -->
+    <!-- GETTING THE VALUE OF AN HTML FORM ELEMENT -->
+    <!-- <input id="myInput" type="text" value="Hello xyzblog!"> -->
+    <!-- SETTIMG THE VALUE OF AN HTML FORM -->
+    <!-- <input id="myInput" type="text"> -->
+     <!--ADDING A CLASS TO AN HTML  -->
+     <!-- <div id="myDiv" class="form-control"></div> -->
+      <!-- <button id="button">Double-clicked!</button> -->
+       <!-- <p id="para">Welcome to xyzblog!</p> -->
+        <!-- <button id="myButton">Submit!</button> -->
+
+
+    
+</body>
+<script>
+    // ADDING A CLASS TO AN HTML USING JS CODE
+    // 
+    // document.getElementById("myDiv").classList.add("form-input");
+    // SETTING THE VALUE OF AN HTML FORM USING JS CODE
+    // document.getElementById("myInput").Value = "New value";
+    // GETTING THE VALUE OF AN HTML FORM ELEMENT USING JS CODE
+    // var inputValue = document.getElementById("myInput"). Value;
+    // console.log(inputValue);
+    // CHANGING THE ATTRIBUTES OF AN HTML ELEMENT USING JAVASCRIPT CODE
+    // document.getElementById("myLink").setAttribute("href", ("login.html"));
+    // HOW TO REMOVE AN HTML ELEMENT FROM A DOCUMENT USING JAVASCRIPT CODE
+    // document.getElementById("myParagraph").remove();
+    // CREATING A NEW HTML ELEMENT USING JS CODE
+    // var newParaagph = document.createElement("p");
+    // newParaagph.innerHTML = "You are welcome to xyzblog javascript toturial on how to create a new element using javascript code!";
+    // document.getElementById("myDiv").appendChild(newParaagph); 
+    // ADDING AN EVENT LISTENER TO AN HTML USING JS CODE
+    // document.getElementById("myButton").addEventListener("click", function(){
+        // alert("Provide your username!");
+    // });
+    // HOW TO CHANGE THE STYLE OF AN HTML ELEMENT USING JS CODE
+    //  document.getElementById("myParagraph").style.color = "red";
+    // HOW TO CHANGE THE TEXT OF AN HTML USING JAVASCRIPT CODE
+    // document.getElementById("myParagraph").innerHTML = "Welcome to xyzblog javascript tutorial"
+
+    // HOW NESTED IF STATEMWNT CAN BE USED FOR GAME DEVELOPMENT TO CHECK LEVELS AND SCORES
+// STEP 1: level unlocking
+// const playerLevel = 5;
+// const playerScore = 1000;
+// const requuireScore = 500;
+// if (playerLevel >= 5){
+    // if (playerScore >= requuireScore){
+        // console.log("Level 6 unlock!");
+        // Unlock level 6
+    // }
+    // else{
+        // console.log("Reach 500 points to unlock level 6.");
+        // Display message
+    // }
+// }
+// else{
+    // console.log("Complete provious level to unlock level 5");
+// }
+
+// FOR A MOBILE APP LOGIN FUNCTIONALITY
+// const username = "xyzblog";
+// const password = "xyzblog05121988";
+// if (username === "xyzblog" && password === "xyzblog05121988"){
+    // console.log("Login successful!")  
+    // Navigate to dashboard
+// }else{
+    // console.log("Invalid username or password.");
+// }
+// STEP 2: ACCOUNT BALANCE CHECK
+// const accountNumber = "1234567890";
+// const accountBalance = 1000.00;
+// if (accountNumber === "1234567890"){
+    // console.log("Account balance: $" + accountBalance);
+    // Display erroe message
+// }else{
+    // console.log("Invalid account number.");
+    // Display error message
+// }
+// STEP 3: FUND TRANSFER
+// const senderAccount = "1234567890";
+// const receiverAccount = "9876543210";
+// const transferAccount = 500.00;
+// // if(senderAccount === "1234567890" && receiverAccount === "9876543210"){
+    // if (transferAmount <= accountBalance){
+        // console.log("Fund transfer successful!");
+        // Update account balance
+    // }else{
+        // console.log("Insufficient funds.");
+        // Display erroe message
+    // }
+// }else{
+    // console.log("Invalid account numbers.");
+    // Display error message
+// }
+// STEP 4: BILL PAYMENT
+// const accountNumber = "1234567890";
+// const billAmount = 500.00;
+// const accountBalance = 1000.00;
+// const paymentMethod = "creditCard";
+// if (accountNumber === "1234567890"){
+// if (billAmount <= accountBalance){
+// if(paymentMethod === "creditCard")
+// console.log("Bill payment successful!"); 
+// Update account balance   
+// }else{
+    // console.log("Insufficient funds.");
+    // display error message
+// }   
+// }
+// STEP 5: TRANSACTION HISTORY
+// const accountNumber = "1234567890";
+// const transactionDate = "2024-01-01 10:30:15AM";
+// if (transactionDate === "2024-01-01 10:30:15AM"){
+//  console.log("Transaction history: 2024-01-01 10:30:15AM");
+// Display transaction history
+// }else{
+    // console.log("Ivalid transaction date.");
+    // Display error mesage
+// }else{
+    // console.log("Invalid account number");
+    // Display error message
+// }
+// STEP 6: SECURITY FEATURES
+// const loginAttempts = 2;
+// if(loginAttempts >= 3){
+    // accountLockout = true;
+    // // console.log("Account locked due to excessive login attempts.");
+    // Lock account
+// }else{
+    // // console.log("Login attempts remaining:" + (3-loginAttempts ));
+// }
+// DOUBLE-CLICK EVENTS
+// document.getElementById("myButton").addEventListener("dblclick", function(){
+    // alert("you double-clicked the button!")
+// });
+
+// DOUBLE CLICK TOGGLE
+// document.getElementById("myButton").addEventListener("dblclick", function(){
+    // // var button = document.getElementById("myButton");
+    // if
+    // (button.style.color === "red"){
+        // button.style.display = "circle";
+    // }else{
+        // button.style.color = "blue"
+    // }
+// });
+// para.addEventListener("mouseover", () =>{
+ // para.style.backgroundColor = "yellow";
+// })
+// para.addEventListener("mouseout", () =>{
+//  para.style.backgroundColor = "yellow";
+// })
+// const score = document.getElementById("button");
+// score.addEventListener("mouseover", () =>{
+    // score.textContent = "xyzblod";
+// 
+// });
+// const score = document.getElementById("button");
+// score.addEventListener("mouseout", () =>{
+    // score.textContent = "xyzblod";
+// 
+// });
+//  const score = document.getElementById("button");
+//  score.addEventListener("mouseover", () =>{
+    // score.textContent = "xyzblog";
+// });
+// score.addEventListener("mouseout", () =>{
+    // score.textContent = "xyzblog";
+
+// });
+// const button = document.getElementById("button")
+// const originalText = button.textContent;
+// button.addEventListener("mouseover", () =>{
+    // button.textContent = "welcome to xyzblog"
+// });
+// button.addEventListener("mouseout", ()=>{
+    // button.textContent = originalText
+//   });
+
+// const ask = document.getElementById("button");
+// ask.addEventListener("mouseover", () =>{
+// // ask.textContent = ask.textContent === "Agi"? "Kingdom":"xyzblog"; 
+// }); 
+// const help = document.getElementById("myButton");
+// help.addEventListener("dblclick", )
+
+</script>
+</html>

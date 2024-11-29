@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment History Form</title>
+    <link rel="stylesheet" href="form6.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Previous/Current Employment</h2>
+    </div>
+    <form id="Employment-form" >
+        <div class="form-group">
+            <label for="Employment_status">Employment Status<span class="asteris"><sup>*</sup></span></label><br>
+            <input type="text" class="form-control" id="Employment_status" name="Employment_status">
+        </div>
+        <div class="form-group">
+            <label for="company_name">Company Name<span class="asteris"><sup>*</sup></span></label><br>
+            <input type="text" class="form-control" id="company_name" name="company_name">
+        </div>
+        <div class="form-group">
+            <label for="industry">Industry<span class="asteris"><sup>*</sup></span></label><br>
+            <input type="text" class="form-control" id="industry" name="industry">
+        </div>
+        <div class="form-group">
+            <label for="job family">Job Family<span class="asteris"><sup>*</sup></span></label><br>
+            <input type="text" class="form-control" id="job family" name="job family">
+        </div>
+        <div class="form-group">
+            <label for="Job Position">Job Position<span class="asteris"><sup>*</sup>
+            </label>
+                <br>
+                <input type="text" class="form-control" id="job position" name="job position">
+        </div>
+        <div class="form-group">
+            <label for="Employment_dates">Employment Dates<span class="asteris"><sup>*</sup></span>
+            </label>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="date" id="start_date" class="form-control" name="start_date">
+                </div>
+                <br>
+                <div class="col-md-6">  
+                    <input type="date" class="form-control" id="end_date" name="end_date">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="reason_for_leaving">Reason For Leaving<span class="asteris"><sup>*</sup></span>
+            </label>
+            <br>
+            <textarea id="reason_for_leaving" class="form-control" name="reason_for_leaving"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="job description">Job Description<span class="asteris"><sup>*</sup></span></label><br>
+            <textarea id="job_description" class="form-control" name="job_description">
+            </textarea>
+        </div>
+        <div class="button">
+            <button type="submit" class="btn1">Back</button>
+        <button type="submit" class="btn">Next</button>
+    </div>
+
+    </form>
+    
+</body>
+</html>

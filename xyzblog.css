@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: red;
+    color: #f5f6fa;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar li{
+    margin-right: 20px;
+    position: relative;
+}
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    transition-duration: 2s ease;
+}
+.navbar a:hover{
+    color: blue;
+}
+.navbar .active{
+    color: aquamarine;
+}
+/* media query for mobile phone */
+@media only screen and(max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        background-color: burlywood;
+    }
+    .navbar ul{
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+    .navbar li{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .navbar a{
+        display: block;
+        padding: 10px;
+        .navbar .menu-icon:hover + ul{
+            display: block;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .navbar li{
+        margin-left: 20px;
+    }
+}
+@media only screen and(min-width: 1025px) {
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar li{
+        margin-right: 30px;
+    }
+}
+.form-container{
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: none;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.p-3t{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: larger;
+    font-weight: 100;
+    
+}
+.form-label{
+    display: block;
+    margin-bottom: 5px;
+    text-align: start;
+    font-size: larger;
+    font-weight: 50%;
+}
+.form-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+}
+.submit-btn{
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background-color: #a8fc20;
+}

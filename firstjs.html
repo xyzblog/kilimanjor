@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>javascript</h1>
+    </div>
+    <script>
+
+
+    //  let age = 5
+    //  console.log(age);
+    //  alert(age);
+    // let age = 25;
+    // if (age >= 18){
+        // alert("You are an adult,")
+    // }else{
+        // alert("You are a minor.")
+    // }
+    // const cars = ["bens", "volve", "carmry"]; 
+    // console.log(cars);
+    // const person = {firstname:"Kingdom", lastname: "Agi", ag:"10", location:"ph"}
+    // console.log(person)
+    // addition
+    // let a =6;
+    // let b = 10;
+    // let add = (a * b)
+    // console.log(a);
+    // let a = 6;
+    // let b = 4;
+    // let c = 7;
+    // let add = 6 + 4 + 7;
+    // console.log(add);
+    // var a = 3;
+    // var b = 17;
+    // var c= 12;
+    // only modify code below this line
+    // a = a + 12;
+    // b = 9 + b;
+    // c = c + 7; 
+    // console.log(add);
+// The Modulusoperator (%) returns the division remainder
+// let x = 5;
+// let y = 2;
+// let z = x % y;
+// console.log(z)
+// The increment operator (++) increments numbers.
+// let x = 5;
+// x++;
+// let z = x;
+// console.log(z);
+// The decrement operator (--) decrements numbers.
+// let x = 5;
+// x--;
+// let z = x;
+// console.log(z)
+// The exponential operation (**) raises the first operand to the powre of the second operand.
+// let x = 5;
+//  let z = x**2;
+//  console.log(z);
+// let x = 5;
+// let z = Math.pow(x,2);
+// console.log(z);
+// The additional assignment operator
+// let x = 10;
+// x += 5;
+// console.log(x);
+// let text = "Hello"; text  += "world";
+// console.log(text);
+// operator precedence describe the order in which operation can be  following the rules of BODMAS
+// let x = 100 * 50/3;
+// console.log(x);
+// alert operation has no console.log
+// let x = 5;
+// let y = 10;
+// alert("The sum is: "+ (x + y));
+// prompt message
+// let enterusername = prompt('Enter information');
+// let x = prompt(" Enter age", "18");
+// console.log(x);
+// The prompt has an input command while the alert has command required input space
+// let age = prompt("How old are you?", "18");
+// console.log("you are " + age + "years old.");
+// Arrays of number: this shows the arrangement of items ranging from 0, 1. 2. 3. ...
+// let fruits = ["apple", "banana", "cherry"];
+// console.log(fruit[2])
+// the "2" shows that cherry will pop-up when console
+// array/push: this can be use to add an item that was not originally in the array of items
+// fruits.push("orange");
+// console.log(fruits)
+// this shows that orange that was not originally among the three items will be automatically added
+// how to replace or modify an index in an array of variable
+// fruits[1]="cashew"
+// unshift add an elent at the beginning of an array
+// fruits.unshift("mango")
+// pop() this is a kind of removing an item from the end
+// fruits.pop();
+// shift: this remove an element from the begining of an array of variables. unlike pop and unshift
+// fruits.shift()
+// to check the lenght or number of elements or an item in an array
+// console.log(fruits.length);
+// Concatination is the act of joining two or more arrays together just as shown in the example below
+// let objects=["Agi", "Kingdom", "favour", "Chima"];
+// let trees=["oil palm", "pea", "paw paw", "Guava"];
+// let animate=objects.concat(trees);
+// console.log(trees.includes("pea"))
+// this operation is use to fetch a section oif an array. 1 and 3 indicate that it fetch from index number 1 to 3 when arranged from 0 1 2 3 4.......
+// let paper=trees.slice(1,3)
+// console.log(paper)
+// an object is the collection of key valued text
+// let person = {name: "Agi", height: "average", complexion: "chocolate"} 
+// person.age=26
+// to modify any of the valued text of the object
+// person.complexion=("dark")
+// to delete any text from the valued text
+// delete person.height
+// to puul out the key value text ie Agi, ......
+
+// console.log(Object.keys(person));
+// this shows the valued text only without the keys
+// console.log(Object.values(person));
+// to show the arrays, index, keys and their values
+// console.log(Object.entries(person));
+// let singleQuoteString ='Hellow, World!';
+// let doubleQuoteString = "Heollw, World!";
+// let backtickString = ``Heollow, World!`;
+// console.log(singleQuoteString)
+// console.log(doibleQuoteString)
+// using backtick
+// let name = "John";
+// let greeting = `Hello, ${name}!`;
+// console.log(greeting);
+// to know the number/length of characters in a word
+// let complement = "happy weekend!";
+// console.log(complement.length);
+// to pick the position of a letter in a word
+// console.log(complement[5]);
+// let name = "Agi Kingdom"
+// to change the string above top upper case
+// console.log(name.toUpperCase());
+// to change to lower case
+// console.log(name.toLowerCase());
+// to pick the position or index number of a letter in a variable
+// console.log(name.indexOf("m"))
+// to check whether an item is included in a given array
+// console.log(name.includes("shalom"))
+// replacing of item in a given array
+// console.log(name.replace("Kingdom", "xyzblog"))
+// to space out words
+// let firstName = "Kingdom";
+// let lastName = "Agi";
+// let fullName = firstName + ' ' + lastName
+// console.log(fullName);
+// to repeat the number of time and action should occur eg laugh of hahahahaha
+// let laugh = "ha";
+// console.log(4);
+// control structure. Example "IF"
+// let age = 18;
+// if (age <= 18);
+// console.log("you are eligible to vote.")
+// you can also use alert
+// alert("you are eligible to vote.")
+// if the condition (age >= 18) is true, the code inside
+// let age = 16;
+// if (age >= 18) {
+    // consloe.log("you are eligible to vote,");
+// } else {
+    // console.log("you are not eligible to vote.");
+// }
+// for grading
+// let score = 49;
+// if (score >= 70) {
+    // console.log("Grade: A");
+// } else if (score >= 60) {
+// console.log("Grade: B"); 
+// }
+// else if (score >= 50) {
+    // console.log("Grade: C");
+// }else if (score >= 40) {
+    // console.log("Grade; D");
+// }else{
+// console.log("Grade: E");
+// }
+// }
+// nexted if condition
+// this is a document that will dipslay on the webpage,but like the alert
+// document.write("welcome to xyzblog");
+// // console.log("welcome to xyzblog");
+// let person = {
+    // fiestName : `Agi`,
+    // lastName : `Kingdom`,
+    // age : 35,
+// }
+//  console.log(person);
+//  console.log(typeof person);
+// selection of colour
+// let selectedColors = ['Red', 'Blue']
+// to add another color to the array
+// selectedColors[2] = 'green';
+// selectedColors[3] = 'brown';
+//  console.log(selectedColors);
+// let a = 3;
+// console.log(a)
+// nexted IF condition
+// const username = "admin";
+// const password = "12345";
+// if (username === "admin"){
+    // if (password === "12345"){
+// console.log("Login successful")
+    // }else {
+        // console.log("incorrect password")
+    // }
+    // 
+// } else {
+    // console.log("user not found");
+// }
+// prompt condition
+// const age = prompt("Enter your age:");
+// // convert the imput to a number
+// const ageNumber = Number(age);
+// //  check if the input is a valide number and if the user
+// if (isNaN(ageNumber)) {
+//     console.log("please enter a valide numbetr.");
+// }else if (ageNumber >= 18) {
+//     console.log("You are eligible to vote.");
+   
+// }else {
+//     console.log("You are not eligible to vote.");
+// }
+// // for grading 
+// // for grading  
+// const score = prompt("Enter your score (1-100)");
+// const scoreNumber = Number(score);
+// // check if the input is a valide number
+// if (isNaN (scoreNumber) || scoreNumber < 0 ||scoreNumber > 
+// 100) {
+//     console.log("Please enter a valid score between 0 and 
+// 100.");
+// } else if (scoreNumber >= 90){
+//     console.log("Grade: A");
+// }else if (scoreNumber >= 80){
+//     console.log("Grade: B");
+// } else if (scoreNumber >= 70){
+//     console.log("Grade: C");
+// }else if (scoreNumber >= 60){
+//     console.log("Grade: D")
+// }else {
+//     console.log("Grade: F");
+// }
+// SWITCH STATEMENT: IT IS BASICALLY USED TO EXECUTE DIFFERENT OUTPUT WHEN THE CONDITION IS BEEN MET.
+// const day = 6;
+// switch(day){
+    // case 1: 
+    // console.log("Monday");
+    // break;
+    // case 2: 
+    // console.log("Tuesday");
+    // break;
+    // case 3:
+    // console.log("Wednesday");
+    // break;
+    // case 4:
+    // console.log("Thursday");
+    // break;
+    // case 5:
+    // console.log("Friday");
+    // break;
+    // default:
+    // console.log("Weekend");
+// }
+// THE ESSENCE OF THE BREAK CONDITION IS TO CONSIDER ONLY THE STATED CONSITION. AVOID USING INFINIT CONDITIONS TO AVOID CAUSING DAMAGE TO THE COMPUTER
+// const day = 3;
+// switch(day){
+    // case 1: 
+    // console.log("Monday");
+    // case 2: 
+    // console.log("Tuesday");
+    // case 3:
+    // console.log("Wednesday");
+    // case 4:
+    // console.log("Thursday");
+    // case 5:
+    // console.log("Friday");
+    // default:
+    // console.log("Weekend");
+// }
+// const fruit = "apple";
+// switch (fruit){
+// case "apple":
+// case "banana":
+// console.log("This is a common fruit.")
+// break;
+// case "kiwi":
+// case "orange":
+// console.log("This is a tropical fruit.")
+// break;
+// default:
+// console,log("Fruit not recognized")
+    // 
+// }
+// 
+// FOR LOOP: 
+// for ( let i = 0; i < 5; i++){
+    // console.log(`Iteration: ${i}`);
+// }
+// for (let i = 5; i> 0; i--){
+    // console.log(`Iteration: ${i}`)
+// }
+// LOPING THROUGH AN ARRAY
+// const fruits = [`Apple`, `Banana`, `Cherry`];
+// for (let i = 1; i < fruits.length; i++){
+//     console.log(fruits[i]);
+// }
+// BREAK AND CONTINUE: THE BREAK TERMINATE AN EXECUTED LOOP AT TEH STATED WHILE CONTINUE JUMPED THE TERMINATED CONDITION AND COMPLETE THE GIVEN LOOP COMMAND
+// for(let i = 0; i < 10; i++){
+//     if (i === 5){
+//     break; 
+//     // Exit the loop when i is 5
+//     }
+//     console.log(i);
+// }
+// WHILE LOOP: 
+// let count = 0;
+// while (count < 3){
+//     console.log("count:", count);
+//     count++;
+// }
+// let password;
+// while (password !== `1234`){
+//     password = prompt('Enter the correct password:')
+// }
+// console.log('Access granted')
+// const colors = [`Red`, `Green`, `Blue`];
+// let i = 0;
+// while (i < colors.length){
+    // console.log(colors[i]);
+    // i++
+// }
+// 
+//   DO WHILE: THIS WILL RUN FIRST BEFORE CHECKING THE CONDITION UNLIKE WHILE THE CHECK THE CONDITION BEFORE IT RUN THE LOOP
+// let count = 0;
+// do {
+//     console.log(`Count is: ${count}`);
+//     count ++;
+// } while( count < 5);
+//  S ARE BLOCK OF CODES DESIGNED TO PERFORM A SPECIFIC TASK
+// The syntax of function is:
+// function greet(name){
+    // console.log(`hello, ${name}`);
+// }
+// greet("Agi")
+// STILL ON FUNCTION 20/11/2024
+// INVOCATION: THIS INVOLVED CALLING A FUNCTION USING IT NAME FOLLOWED BY A PARANTHESES
+// const greet = function(name){
+    // console.log(`Hello, ${name}!`);
+// };
+// greet("xyzblog")
+// ANOTHER EXAMPLE OF FUNCTION
+// const greet = (name) => {
+    // console.log(`Hello, ${name}!`);
+// };
+// greet("xyzblog");
+// (function() {
+    // console.log(`This function runs immediately!`);
+// })();
+// const greet = name => console.log(`Hello, ${name}!`);
+// greet('xyzblog')
+// FUNCTION WITH DEFAULT
+// function greet (name = "Guest"){
+    // return `Hello, ${name}!`;
+// };
+// console.log(greet());
+// console.log(greet("xyzblog"));
+// GLOBAL FUNCTION
+// let globalVar = "i am an xyzblog";
+// function showGlobal(){
+    // console.log(globalVar);
+// }
+// showGlobal();
+// Local function
+// function showLocal(){
+// let localVar = 'I am an xyzblog';
+// console.log(localVar);
+// }
+// showLocal()
+// RETURNING FUNCTION: THE SYNTAX IS function sum(a, b) {
+// return a + b
+// }
+// functio {n sum(a, b){
+    // return a + b
+// }
+// const add = sum(5, 10);
+// console.log(add);
+// 
+
+// function checkNumber(num) {
+    // if (num > 0) {
+        // return "Positive";
+    // }else if (num < 0) {
+        // return "Negative";
+    // }
+    // return "zero";
+// }
+//  console.log(checkNumber(5));
+//  console.log(checkNumber(-3));
+//  console.log(checkNumber (0));
+// FUNCTION ARRAY
+// function getUser(id){
+    // return {
+        // id: id, 
+        // name: "xyzblog", 
+        // email: "xyzblog@gmail.com"
+    // };
+// }
+// const user = getUser(1);
+// console.log(user)
+// function getNumbers(){
+    // return [1, 2, 3, 4, 5];
+// }
+// const numbers = getNumbers();
+// console.log(numbers)
+// let person =["John", "peter", "Michael"];
+// person.push("Franklin");
+// person[0] = "Andy"
+// person.shift("john");
+// console.log(person);
+// 
+// function factorial(n) {
+    // if (n === 0 || n === 1){
+        // return 1;
+    // }else{
+        // return n * factorial(n-1)
+    // }
+// }
+// console.log(factorial(5));
+// function double(num){
+    // return num * 2;
+// }
+// function triple(num){
+    // return num * 3;
+// }
+// const result = triple(double(5));
+// console.log(result);
+// DOM (DOCUMENT OBJECT MODEL)
+
+    </script>
+    <!-- <script src="first.js"></script> -->
+</body>
+</html>

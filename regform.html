@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="regform.css">
+</head> 
+<body>
+    <form action="/action_page.php" class="form-body">
+    <!-- form container -->
+    <div class="form-container">
+        <div class="header">
+            <h2>Welcome to XYZblog</h2>
+        </div>
+        <!-- sub-header -->
+        <div class="sub-header">
+            <h4>Register your acount</h4>
+        </div>
+        <!--label-surname -->
+         <div class="label-first-name">
+            <label for="first name">First Name:
+            </label>
+            <br>
+            <!-- input-first-name -->
+            <input type="text" class="input-first-name" id="input-first-name" placeholder="First name" name="first name" required="">
+         </div>
+         <br>
+         <!--label-last-name -->
+          <div class="label-last-name">
+            <label for="last name">Last Nmae:
+            </label>
+            <br>
+            <input type="text" class="input-last-name" id="input-last-name" placeholder="Last name" name="last name" required="">
+          </div>
+          <br>
+          <!-- username -->
+           <div class="label-username">
+            <label for="username">Username
+            </label>
+            <br>
+            <input type="text" class="input-username" id="username" placeholder="Username" name="username" required="">
+           </div>
+           <br>
+           <!-- email -->
+           <div class="label-email">
+            <label for="email">Email Addres:
+            </label>
+            <br>
+            <input type="text" class="input-email" id="email" placeholder="Email Address" name="email" required="">
+           </div>
+           <br>
+           <!-- phone number -->
+            <div class="phone-number">
+                <label for="phone number">Phone Number:
+                </label>
+                <br>
+                <input type="text" class="input-phone-number" id="pn" placeholder="+234..." name="pn" required="">
+            </div>
+            <br>
+           <!-- pswd -->
+            <div class="label-pswd">
+                <label for="password">Password:
+                </label>
+                <br>
+                <input type="password" class="input-pswd" id="pswd" placeholder="password" name="pswd" required="">
+            </div>
+            <br>
+            <!-- confirm passwprd -->
+             <div class="confirm-pswd">
+                <label for="confirm pswd">Confirm Password:
+                </label>
+                <br>
+                <input type="password" class="input-confirm-pswd" id="confirm-pswd" placeholder="confirm-password" name="confirm-pswd" required="">
+             </div>
+             <br>
+             <div class="button">
+                <a href="login.html">Submit</a>
+            </div>
+    </div>
+    </form>
+</body>
+<script src="../js/bootstrap.bundle.js"></script>
+</html>

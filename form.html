@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form class="form-container" id="registration-form">
+        <!--label-surname -->
+           <div class="form-label">
+           <label for="first name">First Name:
+           </label>
+      <br>
+      <!-- input-first-name -->
+      <input type="text" class="form-input" id="input-first-name" placeholder="
+        name" name="first name">
+    <i class='bx bxs-user'></i>
+    </div>
+    <br>
+    <!--label-last-name -->
+    <div class="form-label">
+      <label for="last name" class="form-label">Surname:
+      </label>
+      <br>
+      <input type="text" class="form-input" id="input-surname" placeholder="Surname=">
+    <i class='bx bxs-user'></i>
+    
+     </div>
+     <br>
+     <!-- email -->
+     <div class="label-email">
+      <label for="email" class="form-label">Email Addres:
+      </label>
+      <br>
+      <input type="text" class="form-input" id="email" placeholder="Email Address" 
+    name="email">
+    <i class="bx bxs-envelope"></i>
+     </div>
+     <br>
+     <!-- phone number -->
+      <div class="phone-number">
+          <label for="phone number" class="form-label">Phone Number:
+          </label>
+          <br>
+          <input type="text" class="form-input" id="pn" placeholder="+234..."
+    name="pn">
+    <i class="bx bxs-phone"></i>
+      </div>
+      <br>
+      <!-- for gender with class gender -->
+      <div class="gender">
+        <label for="gender">Gender</label>
+        <br>
+        <select class="select-input">
+          <option value="Select genger">Select gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+           </select>
+           <br>
+           <br>
+           <!-- Dath of birth -->
+           <div class="date-birth">
+            <label for="date-of-birth" class="date-input">Date Of Birth
+            </label>
+            <br>
+            <input type="date" class="date-input" placeholder="select date of birth" id="dob" 
+            name="dob" min="1900-01-01" max="2024-12-31" required> 
+           </div>
+           <br>
+           <!-- provide NYSC evidence -->
+           <div class="nysc">
+            <label for="completed nysc" class="completed-nysc">Completed NYSC<span class="asteris" 
+             style="color: red;"><sup>*</sup></span></label>
+           <br>
+            <input type="date" class="date-input" placeholder="select date " id="dob" 
+            name="dob" 
+             min="1900-01-01" max="2024-12-31" required>
+           </div>
+           <br>
+           <!-- certificate number -->
+           <div class="nysc-cert">
+           <label for="Certificate number">Certificate Number<span class="asteris" style="color: red;"><sup>*</sup></span></label>
+           <br>
+           <input type="text" class="select-input">
+          </div>
+          <br>
+          <div class="specialization">
+            <label for="specialization">Specialization</label>
+            <br>
+            <input type="text" class="select-input">
+          </div>
+          <br>
+          <!-- country of origin -->
+           <div class="country-of-origin">
+            <label for="country of origin">Country of Origin</label>
+            <br>
+            <select name="state" class="select-input">
+            <option value="select" select>select</option>
+        </select>
+           </div>
+           <br>
+           <!-- state of origin -->
+            <div class="state-of-origin">
+              <label for="State Of Origin">State of Origin: </label
+                ><br>
+                <select name="state" class="select-input">
+             <option value="select" select>select</option>
+              <option value="Abia"select>Abia</option>
+              <option value="Adamawa"select>Abia</option>
+              <option value="Akwa-Ibom"select>Akwa-Ibom</option>
+              <option value="Anambra"select>Anambra</option>
+              <option value="Bauchi"select>Bauchi</option>
+              <option value="Bayelsa"select>Bayelsa</option>
+              <option value="Benue"select>Benue</option>
+              <option value="Borno"select>Borno</option>
+              <option value="Cross River"select>Cross River</option>
+              <option value="Delta"select>Delta</option>
+              <option value="Ebonyi"select>Ebonyi</option>
+              <option value="Edo"select>Edo</option>
+              <option value="Ekiti"select>Ekiti</option>
+              <option value="Enugu"select>Enugu</option>
+              <option value="Gombe"select>Gombe</option>
+              <option value="Imo"select>Imo</option>
+              <option value="Jigawa"select>Jigawa</option>
+              <option value="Kaduna"select>Kaduna</option>
+              <option value="Kano"select>Kano</option>
+              <option value="Katsina"select>Katsina</option>
+              <option value="Kebbi"select>Kebbi</option>
+              <option value="Kogi"select>Kogi</option>
+              <option value="Kwara"select>Kwara</option>
+              <option value="Lagos"select>Lagos</option>
+              <option value="Nasarawa"select>Nasarawa</option>
+              <option value="Niger"select>Niger</option>
+              <option value="Ogun"select>Ogun</option>
+              <option value="Osun"select>Osun</option>
+              <option value="Oyo"select>Oyo</option>
+              <option value="Plateau"select>Plateau</option>
+              <option value="Rivers"select>Rivers</option>
+              <option value="Sokoto"select>Sokoto</option>
+              <option value="Taraba"select>Taraba</option>
+              <option value="Yobe"select>Yobe</option>
+              <option value="Zamfara"select>Zambfara</option>
+             </select>
+             <br>
+            </div>
+            <br>
+            <!-- LGA of origin -->
+             <div class="lga-of-origin">
+              <label for="lga-of-origin">L.G.A of Origin</label>
+              <br>
+              <select name="state" class="select-input">
+             <option value="select" select>select</option>
+              <option value="Abia"select>Abia</option>
+              <option value="Adamawa"select>Abia</option>
+              <option value="Akwa-Ibom"select>Akwa-Ibom</option>
+              <option value="Anambra"select>Anambra</option>
+              <option value="Bauchi"select>Bauchi</option>
+              <option value="Bayelsa"select>Bayelsa</option>
+              <option value="Benue"select>Benue</option>
+              <option value="Borno"select>Borno</option>
+              <option value="Cross River"select>Cross River</option>
+              <option value="Delta"select>Delta</option>
+              <option value="Ebonyi"select>Ebonyi</option>
+              <option value="Edo"select>Edo</option>
+              <option value="Ekiti"select>Ekiti</option>
+              <option value="Enugu"select>Enugu</option>
+              <option value="Gombe"select>Gombe</option>
+              <option value="Imo"select>Imo</option>
+              <option value="Jigawa"select>Jigawa</option>
+              <option value="Kaduna"select>Kaduna</option>
+              <option value="Kano"select>Kano</option>
+              <option value="Katsina"select>Katsina</option>
+              <option value="Kebbi"select>Kebbi</option>
+              <option value="Kogi"select>Kogi</option>
+              <option value="Kwara"select>Kwara</option>
+              <option value="Lagos"select>Lagos</option>
+              <option value="Nasarawa"select>Nasarawa</option>
+              <option value="Niger"select>Niger</option>
+              <option value="Ogun"select>Ogun</option>
+              <option value="Osun"select>Osun</option>
+              <option value="Oyo"select>Oyo</option>
+              <option value="Plateau"select>Plateau</option>
+              <option value="Rivers"select>Rivers</option>
+              <option value="Sokoto"select>Sokoto</option>
+              <option value="Taraba"select>Taraba</option>
+              <option value="Yobe"select>Yobe</option>
+              <option value="Zamfara"select>Zambfara</option>
+             </select><br>
+             </div>
+             <br>
+             <!-- country of residence -->
+              <div class="country-of-residence">
+                <label for="country-of-residence">country of Residence</label>
+                <br>
+                <select name="state" class="select-input">
+               <option value="select" select>select</option>
+                <option value="Abia"select>Abia</option>
+                <option value="Adamawa"select>Abia</option>
+                <option value="Akwa-Ibom"select>Akwa-Ibom</option>
+                <option value="Anambra"select>Anambra</option>
+                <option value="Bauchi"select>Bauchi</option>
+                <option value="Bayelsa"select>Bayelsa</option>
+                <option value="Benue"select>Benue</option>
+                <option value="Borno"select>Borno</option>
+                <option value="Cross River"select>Cross River</option>
+                <option value="Delta"select>Delta</option>
+                <option value="Ebonyi"select>Ebonyi</option>
+                <option value="Edo"select>Edo</option>
+                <option value="Ekiti"select>Ekiti</option>
+                <option value="Enugu"select>Enugu</option>
+                <option value="Gombe"select>Gombe</option>
+                <option value="Imo"select>Imo</option>
+                <option value="Jigawa"select>Jigawa</option>
+                <option value="Kaduna"select>Kaduna</option>
+                <option value="Kano"select>Kano</option>
+                <option value="Katsina"select>Katsina</option>
+                <option value="Kebbi"select>Kebbi</option>
+                <option value="Kogi"select>Kogi</option>
+                <option value="Kwara"select>Kwara</option>
+                <option value="Lagos"select>Lagos</option>
+                <option value="Nasarawa"select>Nasarawa</option>
+                <option value="Niger"select>Niger</option>
+                <option value="Ogun"select>Ogun</option>
+                <option value="Osun"select>Osun</option>
+                <option value="Oyo"select>Oyo</option>
+                <option value="Plateau"select>Plateau</option>
+                <option value="Rivers"select>Rivers</option>
+                <option value="Sokoto"select>Sokoto</option>
+                <option value="Taraba"select>Taraba</option>
+                <option value="Yobe"select>Yobe</option>
+                <option value="Zamfara"select>Zambfara</option>
+               </select>
+               <br>
+              </div>
+              <br>
+              <!-- state of residence -->
+               <div class="state-of-residence">
+                <label for="state state-of-residence">state-of-Residence</label>
+                <br>
+                <select name="state" class="select-input">
+               <option value="select" select>select</option>
+                <option value="Abia"select>Abia</option>
+                <option value="Adamawa"select>Abia</option>
+                <option value="Akwa-Ibom"select>Akwa-Ibom</option>
+                <option value="Anambra"select>Anambra</option>
+                <option value="Bauchi"select>Bauchi</option>
+                <option value="Bayelsa"select>Bayelsa</option>
+                <option value="Benue"select>Benue</option>
+                <option value="Borno"select>Borno</option>
+                <option value="Cross River"select>Cross River</option>
+                <option value="Delta"select>Delta</option>
+                <option value="Ebonyi"select>Ebonyi</option>
+                <option value="Edo"select>Edo</option>
+                <option value="Ekiti"select>Ekiti</option>
+                <option value="Enugu"select>Enugu</option>
+                <option value="Gombe"select>Gombe</option>
+                <option value="Imo"select>Imo</option>
+                <option value="Jigawa"select>Jigawa</option>
+                <option value="Kaduna"select>Kaduna</option>
+                <option value="Kano"select>Kano</option>
+                <option value="Katsina"select>Katsina</option>
+                <option value="Kebbi"select>Kebbi</option>
+                <option value="Kogi"select>Kogi</option>
+                <option value="Kwara"select>Kwara</option>
+                <option value="Lagos"select>Lagos</option>
+                <option value="Nasarawa"select>Nasarawa</option>
+                <option value="Niger"select>Niger</option>
+                <option value="Ogun"select>Ogun</option>
+                <option value="Osun"select>Osun</option>
+                <option value="Oyo"select>Oyo</option>
+                <option value="Plateau"select>Plateau</option>
+                <option value="Rivers"select>Rivers</option>
+                <option value="Sokoto"select>Sokoto</option>
+                <option value="Taraba"select>Taraba</option>
+                <option value="Yobe"select>Yobe</option>
+                <option value="Zamfara"select>Zambfara</option>
+               </select>
+               <br>
+               </div>
+               <br>
+               <!-- LGA of residence -->
+                <div class="lga-of-residence">
+                  <label for="lga-of-residence">L.G.A of Residence</label>
+                  <br>
+                  <select name="state" class="select-input">
+                 <option value="select" select>select</option>
+                  <option value="Abia"select>Abia</option>
+                  <option value="Adamawa"select>Abia</option>
+                  <option value="Akwa-Ibom"select>Akwa-Ibom</option>
+                  <option value="Anambra"select>Anambra</option>
+                  <option value="Bauchi"select>Bauchi</option>
+                  <option value="Bayelsa"select>Bayelsa</option>
+                  <option value="Benue"select>Benue</option>
+                  <option value="Borno"select>Borno</option>
+                  <option value="Cross River"select>Cross River</option>
+                  <option value="Delta"select>Delta</option>
+                  <option value="Ebonyi"select>Ebonyi</option>
+                  <option value="Edo"select>Edo</option>
+                  <option value="Ekiti"select>Ekiti</option>
+                  <option value="Enugu"select>Enugu</option>
+                  <option value="Gombe"select>Gombe</option>
+                  <option value="Imo"select>Imo</option>
+                  <option value="Jigawa"select>Jigawa</option>
+                  <option value="Kaduna"select>Kaduna</option>
+                  <option value="Kano"select>Kano</option>
+                  <option value="Katsina"select>Katsina</option>
+                  <option value="Kebbi"select>Kebbi</option>
+                  <option value="Kogi"select>Kogi</option>
+                  <option value="Kwara"select>Kwara</option>
+                  <option value="Lagos"select>Lagos</option>
+                  <option value="Nasarawa"select>Nasarawa</option>
+                  <option value="Niger"select>Niger</option>
+                  <option value="Ogun"select>Ogun</option>
+                  <option value="Osun"select>Osun</option>
+                  <option value="Oyo"select>Oyo</option>
+                  <option value="Plateau"select>Plateau</option>
+                  <option value="Rivers"select>Rivers</option>
+                  <option value="Sokoto"select>Sokoto</option>
+                  <option value="Taraba"select>Taraba</option>
+                  <option value="Yobe"select>Yobe</option>
+                  <option value="Zamfara"select>Zambfara</option>
+                 </select>
+                 <br>
+                </div>
+                <br>
+             <!-- paragraph here -->
+              <div class="p1">
+                <p style="color: red;">Certifications eg. CNNP, ICAN TTC, NSCHE,etc.<br> Enter "None" 
+    if this field is not applicable</p>
+              </div>
+              <br>
+              <!-- current salary -->
+               <div class="current-salary">
+                <label for="current salary">Current Salary Range</label>
+                <br>
+                <select class="select-input">
+                 <option value="current-salary" select>select</option>
+                 <option value="select" select>None</option>
+                </select>
+               </div>
+               <br>
+               <!-- expected salary range per month -->
+               <div class="expected-salary">
+                <label for="expected salary">Current Salary Range</label>
+                <br>
+                <select name="select-input"  class="select-input">
+                 <option value="select" select>select</option>
+                 <option value="expected-salary" select>None</option>
+                </select>
+                </div>
+                <br>
+                <!--  our info -->
+                 <div class="our-info">
+                  <label for="our-info">How did you hear about this opening?</label>
+                  <br>
+                  <select name="select-input" class="select-input">
+                    <option value="select" select>Referral</option>
+                    <option value="expected-salary" select>None</option>
+                   </select>
+                 </div>
+                 <br>
+                 <!-- your proficient in French language -->
+                  <div class="french-lang">
+                    <label for="French lang">Are you proficient in French Language?</label>
+                    <br>
+                    <select name="select-input" class="select-input">
+                      <option value="select" select>select</option>
+                      <option value="select" select>Yes</option>
+                      <option value="select"select>No</option>
+                     </select>
+                  </div>
+                  <!-- residential address -->
+                   <div class="residence-address">
+                    <label for="residence-address">Residential Address</label>
+                    <br>
+                    <input type="textarea" class="textarea" id="textarea">
+                   </div>
+                   <br>
+                   <!-- disability space -->
+                    <div class="disability-space">
+                      <label for="disability">If you have a disability or special need<br> that required accommodation, please indicate </label>
+                      <br>
+                      <input type="textarea" class="textarea">
+                    </div>
+                    <br>
+                    <!--  employment status-->
+                      <div class="employment-status">
+                        <p class="p2">Specify your current employment status</p>
+                        <ul class="ordered-list">
+                            <li class="list">
+                                <input type="radio" id="unemployment" name="unemployment">
+                                <label for="unemployment" >Unemployment</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="employment" name="employment">
+                                <label for="employment" class="ordered-list">Employment</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="Self-employed" name="Self-employed">
+                                <label for="Self-employed" class="ordered-list">Self-Employment</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="Student" name="st">
+                                <label for="Student" class="ordered-list">Student</label>
+                            </li>
+
+                        </ul>
+                      <br>
+                      <!-- submit button -->
+                       <div class="submit-btn"> 
+                        <button type="submit" class="save-button">Save</button>
+                        <a href="form2.html" class="save-button">Save & Continue</a>
+                       </div>
+                       <br>
+                       <br>
+                       <div class="footer">
+                        <h3>Follow us</h3>
+                        <br>
+                        <div class="checkbox-container">
+                          <input type="checkbox" id="checkbox-id">
+                          <label for="checkbox-id" class="checkbox-label">
+                            <span class="checkbox-icon">
+                              <i class="bx bxl-facebook"></i>
+                        <br>
+                        <input type="checkbox" id="checkbox-id">
+                        <label for="checkbox-id" class="checkbox-label">
+                        <span class="checkbox-icon">
+                        <i class="bx bxl-twitter"></i>
+                        <br>
+                        <input type="checkbox" id="checkbox-id">
+                        <label for="checkbox-id" class="checkbox-label">
+                        <span class="checkbox-icon">
+                        <i class="bx bxl-linkedin"></i>
+                        <br>
+                        <input type="checkbox" id="checkbox-id">
+                        <label for="checkbox-id" class="checkbox-label">
+                        <span class="checkbox-icon">
+                        <i class="bx bxl-instagram"></i>
+                      </span>
+                      </label>
+                      </div>
+                      <br>
+                      <div class="footer-info">
+                        <p>&copy; 2024. All right reserved</p>
+                        <a href="#">Terms and privacy, company name</a>
+                      </div>
+                       </div>
+          </div>
+    </form>
+    <script>  
+    let text= "system message.*/ profile has been updated"
+    console.log(text); 
+    alert(text); 
+    </script>
+    <script src="first.js"></script>
+</body>
+</html>

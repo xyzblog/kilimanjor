@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* media for mobile devices */
+/* @media only screen and(max-width:768px) */
+
+.form-container{
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(66, 173, 173);
+    border-radius: 2rem;
+    border: 1px solid #ddd;
+}
+.header{
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+.header:hover{
+    color: brown;
+    cursor: progress;
+    transform: rotateY('360deg');
+    transition-duration: 10s;
+}
+.sub-header{
+    text-align: center;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sub-header:hover{
+    color: darksalmon;
+    cursor: progress;
+    transform: rotateX('180deg');
+    transition-duration: 10s;
+}
+.label-first-name{
+    text-align: center;
+    font-size: large;
+}
+.input-first-name{
+    padding: 7px;
+}
+.label-last-name{
+    text-align: center;
+    font-size: large;
+}
+.input-last-name{
+padding: 7px;
+}
+.label-username{
+    text-align: center;
+    font-size: large;
+}
+.input-username{
+    padding: 7px;
+}
+.label-email{
+    text-align: center;
+    font-size: large;
+}
+.input-email{
+    padding: 7px;
+}
+.phone-number{
+    text-align: center;
+    font-size: large;
+}
+.input-phone-number{
+    padding: 7px;
+}
+.label-pswd{
+    text-align: center;
+    font-size: large;
+}
+.input-pswd{
+    padding: 7px;
+}
+.confirm-pswd{
+    text-align: center;
+    font-size: large;
+
+}
+.input-confirm-pswd{
+    padding: 7px;
+}
+button[type="submit"]{
+margin-left: auto;
+margin-right: auto;
+display: block;
+padding: 8px;
+}
+.button:hover{
+    color: blueviolet;
+    transition: linear;
+    transition-duration: 5s;
+}
+

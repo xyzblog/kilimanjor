@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form6.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Add Professional Certificate</h2>
+        <form id="certificate-form">
+            <div class="mb-3">
+                <label for="certificate_type" class="form-label">Certificate Type<span class="asteris"><sup>*</sup></span></label><br>
+                <input type="text" id="certificate_type" name="certificate_type" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="professional_body" class="form-label">Professional Body<span class="asteris"><sup>*</sup></span></label><br>
+                <input type="text" id="professional_body" name="professional_body" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="issue_date" class="form-label">Issue Date<span class="asteris"><sup>*</sup></span></label><br>
+                <input type="date" id="issue_date" name="issue_date" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="expiration_date" class="form-label">Expiration Date<span class="asteris"><sup>*</sup></span></label><br>
+                <input type="date" id="expiration_date" name="expiration_date" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="level" class="form-label">Level<span class="asteris"><sup>*</sup>
+                </span></label><br>
+                <input type="text" id="level" name="levl" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="certificate_description">Certificate Description<span class="asteris"><sup>*</sup></span></label><br>
+                <textarea id="certificate_description" name="certificate_description" class="form-control">
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Certificate</button>
+        </form>
+    </div>
+</body>
+</html>

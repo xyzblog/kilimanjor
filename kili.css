@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-nav{
+    gap: 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+.kingdom{
+    flex-grow:0;
+}
+
+.container-fluid{
+    padding: 5px;
+    padding-left: 4.2rem;
+    padding-right: 5rem;
+}
+
+.watermark{
+    background: url(./background-cover.jpg);
+
+}
+
+.float-start{
+    position: relative;
+    left: -15rem;
+}
+.float-end{
+       position: relative;
+    right: -13rem;
+    transform: rotateY(180deg);
+}
+.nav-link{
+    color: white !important;
+    text-decoration:underline 3px transparent ;
+    /* transition: text-decoration-color 5s ease-in ; */
+    transition: all 2s;
+}
+.nav-link:hover{
+    text-decoration-color:white ;
+}
+
+
+.h5{
+    font-family: Ubuntu, sans-serif;
+    font-weight: 600;
+    color: #383838 !important;
+    font-size: 50px;
+   padding-top: 8rem;
+   text-align: center;
+}
+.h5 span{
+    display: block;
+}
+.p1{
+    font-weight: 600;
+    color: #383838 !important;
+    text-align: center;
+}
+
+.card{
+    width: 80%;
+}
+
+.card:hover{
+    outline: 2px solid red;
+}
+.col{
+    padding-left: 0;
+    padding-right: 0;
+}

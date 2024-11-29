@@ -1,0 +1,89 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+.container{
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: red;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group{
+    margin-bottom: 20px;
+    align-content: center;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 500px;
+}
+.btn{
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: end;
+}
+.btn:hover{
+    background-color: #3e8e41;
+}
+#Employment-form{
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.asteris{
+    color: red;
+}
+.btn1{
+    background-color: #000000;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.btn1:hover{
+    background-color: red;
+}
+.button{
+    justify-content: space-between;
+    display: flex;
+}
+/* tablet layer(768px-1024px) */
+@media only screen and(min-width: 768px) and( max-width: 1024px) {
+    .container{
+        padding: 15px;
+        background-color: bisque;
+    }
+    .form-group{
+        margin-bottom: 15px;
+    }
+    
+}
+/* mobile layer(480px-767px) */
+@media only screen and(min-width: 480px) and (max-width: 767px) {
+    .container{
+        padding: 10px;
+    }
+    .form-group{
+        margin-bottom: 10px;
+    }
+    .form-control{
+        padding: 10px;
+    }
+}

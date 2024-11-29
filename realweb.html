@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./realweb.css">
+</head>
+<body>
+    <div class="container">
+        <!-- styled the card -->
+        <div class="card">
+            <h3 class="card-header">Enjoy Your Leisure</h3>
+            <div class="card-body"><img src="../kilimanjor/right.png" width="300px" height="200px">
+            </div>
+        </div>
+        <!-- card ends above -->
+        <!-- sign in form begins from here-->
+         <!-- form container should be styled first -->
+         <div class="form-container">
+            <!-- form heading should be styled next after the container -->
+             <div class="header">
+                <h2 class="log-in">LogIn</h2>
+             </div>
+             <br>
+             <br>
+             <!-- the body of the form begins here -->
+             <form action="/action_page.php" class="form-body">
+                <!-- styled the form-label  for  usernameafter the form-body -->
+                <div class="form-label-uname">
+                    <label for="username">Username</label>
+                    <br>
+                    <input type="text" class="form-check-input" id="uname" placeholder="Enter Username" name="uname" required>
+                    <!-- styled the feed back after the username-->
+                     <div class="invalid-feedback">Please fill out this field
+                     </div>
+                </div>
+                <br>
+                <!-- styled the form-label  for  usernameafter the form-body -->
+                <div class="form-label-email">
+                   <label for="username">Email</label>
+                <br>
+                    <input type="text" class="form-check-input" id="email" placeholder="Enter Email" name="email" 
+                    required>
+                 <!-- styled the feed back after the username-->
+                 <div class="invalid-feedback">Please fill out this field
+                 </div>
+                  </div>
+                  <br>
+                  <!-- styled form-control for password -->
+                  <div class="form-control-pwd">
+                   <label for="pwd">Password
+                    </label>
+                    <br>
+                    <input type="password" class="form-check-input" id="pwd" placeholder="Enter password" name="pswd" required>
+                    <div class="invalid-feedback">Please fill out this field.
+                   </div>
+                   </div>
+                   <br>
+                   <!-- styled form-control for confirm password -->
+                   <div class="form-control-pwd">
+                  <label for="pwd"> Confirm Password
+                  </label>
+                  <br>
+                   <input type="password" class="form-check-input" id="cpwd" placeholder="Confirm password" name=" confirm pswd" required>
+                   <div class="invalid-feedback">Please fill out this field.
+                   </div>
+                   </div>  
+                   <br>
+                   <!-- styled the checkbox -->
+                   <div class="check-box">
+                    <input type="checkbox" id="mycheck" name="remember" required>
+                    <label class="form-check-label" for="mycheck">Remember me</label>
+                    <div class="invalid-feedback">Check this checkbox to Continue
+                    </div>
+                 </div>
+                 <br>
+                 <!-- styled the button -->
+                  <div class="button">
+                    <button type="submit"><a href="onelgasite.html">Sign in</a></button>
+                  </div>
+                  <br>
+                  <div class="forget-pwd">
+                    <label for="forget pwd">Forget Your PassWord?</label> 
+                  </div>
+                  <br>
+                  <div class="lined-text">
+                    <p>OR</p>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="account">
+                    <p>Don't have an account?</p>
+                    <a href="regform.html">Register</a>
+                  </div>
+             </form>
+         </div>
+    </div>
+</body>
+<script src="../js/bootstrap.bundle.js"></script>
+</html>
