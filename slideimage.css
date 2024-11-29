@@ -14,7 +14,7 @@ body{
     max-width: 600px;
     text-align: center;
 }
-.slider-image{
+.slide-img{
     width: 100%;
     height: auto;
     transition: opacity 1s ease;

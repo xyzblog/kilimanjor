@@ -5,7 +5,7 @@ const images = [
     'image3.jpg',
     'image4.jpg',
     'image5.jpg',
-    'image6.jpg',
+    
 ]
 let currentImageIdex = 0;
 // Get the image element and button element
