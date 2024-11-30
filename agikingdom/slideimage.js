@@ -26,3 +26,4 @@ changeButton.addEventListener('click', () =>{
 });
 // start automatic image change
 changeImageAutomatically();
+console.log(images)
