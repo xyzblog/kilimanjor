@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        form{
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, o.1);
+            width: 300px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        buton{
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+        .error{
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+        <h2>Register</h2> 
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" placeholder="Enter your name">
+        <span id="nameError" class="error"></span>
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email" placeholder="Enter your email">
+        <span id="emailError" class="error"></span>
+        <br>
+        <label for="pasword">Password:</label>
+        <br>
+        <input type="password" id="pasword" placeholder="Enter your password">
+        <span id="passwordError" class="error"></span>
+        <br>
+        <button type="submit"><a href="index3.html">Submit</a></button>
+    </form>
+    <script>
+        // document.getElementById('registrationForm').addEventListener('submit', function(e){
+            // event.preventDefault(e);
+            // prevent form submission
+            // get form values
+            // const name = document.getElementById('name').value.trim();
+            // const email = document.getElementById('email').value.trim();
+            // const password = document.getElementById('password').value.trim();
+            // clear previous error messages
+            // document.getElementById('nameError').textContent = '';
+            // document.getElementById('emailError').textContent = '';
+            // document.getElementById('passwordError').textContent = '';
+            // let isValide = true;
+            // Name validation
+            // if (name === ''){
+                // document.getElementById('nameError').textContent = 'Name is required.';
+                // isValide = false;
+            // }
+            // Email validation
+            // const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            // if (email ===''){
+                // document.getElementById('emailError').textContent = 'Email is required.';
+                // isValide = false;
+            // }else if (!emailPattern.text(email)){
+                // document.getElementById('emailError').textContent = 'Invalide email format.';
+                // isValide = false;
+            // }
+            // password validation
+            // // const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            // if(password === ''){
+                // document.getElementById('passwordError').textContent = 'password is required.';
+                // isValide = false
+            // }else if(!passwordPattern.test(password)){
+                // // document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long, and must include uppercase, lowercase, number, and special character.';
+                // isValide = false;
+            // }
+            // If all validations pass, submit the form (or show a success message)
+            // if(isValide){
+                // alert('Form submitted successfully!');
+            // }
+
+        // })
+        // ANOTHER FORM VALIDATION CODE
+        document.getElementById("registrationForm").addEventListener('submit', function (e){
+    // prevent form submission
+    e.preventDefault();
+    // retrieve form value
+    const username = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    // clear previous error messages
+    document.getElementById('nameError').textContent = '';
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('passwordError').textContent = '';
+    // initialize a validation flag
+    let isValid = true;
+    // validate name
+    if(!name){
+        document.getElementById('nameError').textContent = 'name';
+        isValid = false;
+    }else if (name.length < 3) {
+        document.getElementById('nameError').textContent = 'Name must be at least 3 characters.';
+        isValid = false;
+    }
+    // validate email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    // Basic email regax
+    if (!email) {
+        document.getElementById('emailError').textContent = 'Email is required.';
+        isValid = false;
+    }else if (!emailPattern.test(email)){
+        document.getElementById('emailError').textContent = 'Please enter a valid email address';
+        isValid = false;
+    }
+    // valide password
+    if (!password){
+        document.getElementById('passwordError').textContent = "password is requird.";
+        isValid  = false;
+    }else if (password.length < 8) {
+        document.getElementById('passwordError').textContent = 'Password must be at least 8 character.';
+        isValid = false;
+    }
+    // if all fields are valid, submit the form
+    if (isValid) {
+        alert('Form submitted successfully!');
+        // Add code to submit the form programmatically or reload the page
+        this.submit(); 
+        // uncomment to enable for submission
+    }
+})
+    </script>
+</body>
+</html>

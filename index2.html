@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        button:enabled {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        h2 {
+            text-align: center;
+            font-size: x-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+        <h2>Register</h2>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" placeholder="Enter your name">
+        <span id="nameError" class="error"></span>
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email" placeholder="Enter your email">
+        <span id="emailError" class="error"></span>
+        <br>
+        <label for="password">Password:</label>
+        <br>
+        <input type="password" id="password" placeholder="Enter your password">
+        <span id="passwordError" class="error"></span>
+        <br>
+        <label for="confirmPassword">Confirm Your Password:</label>
+        <br>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+        <span id="confirmPasswordError" class="error"></span>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.getElementById('registrationForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const submitButton = form.querySelector('button');
+
+        // Real-time validation
+        form.addEventListener('input', function(){
+            validateForm();
+        });
+
+        function validateForm(){
+            let isValid = true;
+
+            // Name validation
+            if (nameInput.value.trim() === ''){
+                showError('nameError', 'Name is required.');
+                isValid = false;
+            } else {
+                clearError('nameError');
+            }
+
+            // Email validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailPattern.test(emailInput.value)){
+                showError('emailError', 'Enter a valid email address.');
+                isValid = false;
+            } else {
+                clearError('emailError');
+            }
+
+            // Password validation
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordPattern.test(passwordInput.value)){
+                showError('passwordError', 'Password must have 8 characters, with uppercase, lowercase, number & special character.');
+                isValid = false;
+            } else {
+                clearError('passwordError');
+            }
+
+            // Confirm password validation
+            if (confirmPasswordInput.value !== passwordInput.value || confirmPasswordInput.value.trim() === ''){
+                showError('confirmPasswordError', 'Passwords do not match.');
+                isValid = false;
+            } else {
+                clearError('confirmPasswordError');
+            }
+
+            // Enable/Disable submit button
+            submitButton.classList.toggle('enable', isValid);
+            submitButton.disabled = !isValid;
+        }
+
+        function showError(elementId, message){
+            document.getElementById(elementId).textContent = message;
+        }
+
+        function clearError(elementId){
+            document.getElementById(elementId).textContent = '';
+        }
+
+        form.addEventListener('submit', function (event){
+            event.preventDefault();
+
+            // Only proceed if the form is valid
+            if (submitButton.classList.contains('enable')) {
+                alert('Form submitted successfully!');
+                window.location.href = 'index3.html';  // Modify 'success.html' to the desired page
+            } 
+        });
+    </script>
+</body>
+</html>

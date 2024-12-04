@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .slide-container{
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba{0, 0, 0, 0.1};
+        }
+        .slider{
+            display: flex;
+            transform: transform 0.5s ease-in-out;
+        }
+        .slide{
+            min-width: 100%;
+            transition: opacity is ease-in-out;
+        }
+        .slide img{
+            width: 100%;
+            border-radius: 8px;
+        }
+        .navigation{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .navigation button{
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .navigation button:hover{
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide" id="slide">
+                <img src="hhtps://via.placeholder.com/800x400/FF5733/ffffff?text = Slide +1" alt="slide 1">
+            </div>
+            <div class="slide" id="slide">
+                <img src="https://via.placeholder.com/800x400/33FF57/ffffff?text = slide +2" alt="slide 2">
+            </div>
+            <div class="slide" id="slide">
+                <img src="https://via.placeholder.com/800x400/5733FF/ffffff?text = slide +3" alt="slide 3" width="400px" height="200px">
+            </div>
+        </div>
+        <div class="navigation">
+            <button id="prevBtn">&#10094;</button>
+            <button id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+    <script>
+        const slider = document.getElementById('slider');
+        const slides = document.querySelectorAll('.slids');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentIndex = 0;
+        function showSlide(index){
+            if(index >= slides.length){
+                currentIndex = 0;
+            }else if(index < 0){
+                currentIndex = slides.legth - 1;
+            }else{
+                currentIndex = index;
+            }
+            slider.style.transform =`translateX(-${currentIndex * 100}%)`;
+        }
+        function nextSlide(){
+            showSlide(currentIndex + 1);
+        }
+        function prevSlide(){
+            showSlide(currentIndex -1);
+        }
+        // Event listeners for navigation buttons
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>

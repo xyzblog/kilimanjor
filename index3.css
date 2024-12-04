@@ -1,0 +1,134 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: #333;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border: 8px;
+}
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar ul li{
+    margin: 0 15px;
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar ul li a:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+.header{
+    display: block;
+    text-align: center;
+    background-color: aquamarine;
+    color: #333;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+}
+.card-header{
+    text-align: center;
+    background-color: chocolate;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 10px;
+    margin:20px;
+    
+}
+.card-container{
+    background-color: rgb(183, 152, 165);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-grow: calc(1);
+    align-content: space-between;
+    gap: 20px;
+}
+.cards{
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    width: 200px;
+    
+}
+.section-header{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: burlywood;
+    color: #333;
+    text-align: center;
+    text-decoration: wavy;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+.section{
+    background-color: rgb(81, 114, 68);
+position: relative;
+display: flex;
+justify-content: space-around;
+flex-grow: calc(2);
+align-content: space-between;
+gap: 20px;
+padding-bottom: 20px;
+padding-top: 50px;
+
+}
+.text-overlay{
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+    color: white;
+}
+.image-text{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 300px;
+}
+.image-text h2 p{
+    position: absolute;
+    display: block;
+    text-align: center;
+    
+}
+button{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: chartreuse;
+    cursor: pointer;
+}
+/* footer */
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.h2{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body>
+    <!-- navbar -->
+     <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="#home">Home</a>
+            </li>
+            <li><a href="#card">Cards</a>
+            </li>
+            <li><a href="#content">content</a>
+            </li>
+            <li><a href="#footer">Footer</a>
+            </li>
+        </ul>
+     </nav>
+     <!-- Home section -->
+      <div class="header">
+     <h1>Welcome To XYZBLOG Develpoper</h1>
+     <p>Your one-stop solution for awesome content</p>
+    </div>
+    
+    <!-- cards section -->
+     <div id="cards" class="card-header"> 
+        <h2 class="h2">Our Features</h2>
+     </div>
+        <div class="card-container" id="cards-container">
+            <div class="cards" id="cards">
+                <img src="first assignment image 1.jpeg" alt="logo" width="50px" height="50px">
+                <div class="cards-content" id="cards-content">
+                    <h3>Feature 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque vitae quod nemo, maiores dolore eaque enim aliquam sapiente unde in sunt? Eum sit amet nemo animi quos incidunt, est magni.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <br>
+            <div class="cards" id="card">
+                <img src="first assignment image 1.jpeg" alt="logo" width="50px" height="50px">
+                <div class="cards-content" id="cards-content">
+                    <h3>Feature 2</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis eius illum maiores deserunt obcaecati id qui ducimus enim! In quis minus sequi molestias ipsa nostrum, reprehenderit sint pariatur voluptatem aut.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <br>
+            <div class="cards" id="card">
+                <img src="first assignment image 1.jpeg" alt="logo" width="50px" height="50px">
+                <div class="cards-content" id="cards-content">
+                    <h3>Feature 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa veritatis, vel nostrum laboriosam tempora quisquam nemo eum atque ducimus eligendi expedita, recusandae quis amet impedit animi corporis dignissimos officiis veniam.</p>
+                    <button>Learn more</button>
+                </div>
+            </div>
+            <br>
+            <div class="cards" id="card">
+                <img src="first assignment image 1.jpeg" alt="logo" width="50px" height="50px">
+                <div class="cards-content" id="cards-content">
+                    <h3>Feature 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maxime voluptatum in, repellat cum architecto illum incidunt esse magnam nostrum cumque unde quod, perspiciatis ipsam soluta ex iure enim. Explicabo.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <br>
+            <div class="cards" id="card">
+                <img src="first assignment image 1.jpeg" alt="logo" width="50px" height="50px">
+                <div class="cards-content" id="cards-content">
+                    <h3>Feature 5</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quia eaque assumenda illum culpa quo mollitia facere placeat enim facilis ratione, deleniti earum neque iure laboriosam autem sint. Delectus, quis.</p>
+                    <button>Learn More</button>
+                </div>
+            </div> 
+            <br>
+            <div class="cards" id="card">
+                <img src="first assignment image 1.jpeg" alt="logo" width="50px" height="50px">
+                <div class="cards-content" id="cards-content">
+                    <h3>Feature 6</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, iure quia! Autem, cum. Nulla, repellendus unde! Id, consequatur dolores sed temporibus placeat provident ipsam labore distinctio? Dolore velit rem quam!</p>
+                    <button>Learn More</button>
+                </div>
+            </div> 
+        </div>
+        <br>
+     <!-- contact section -->
+      <div class="section-header" id="section">
+        <h2>About XYZBLOG</h2>
+      </div>
+      <div class="section" id="section">
+        <div class="image-text" id="image">
+            <img src="my 14.jpeg" alt="image1" width="400px" height="200px">
+            <div class="text-overlay" id="text-overlay">
+                <h3>Image Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="image-text" id="image">
+            <img src="my 14.jpeg" alt="image2" width="400px" height="200px">
+            <div class="text-overlay" id="image-text">
+                <h3>Image Title</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="image-text" id="image">
+           <img src="my 14.jpeg" alt="image2" width="400px" height="200px">
+           <div class="text-overlay" id="image-text">
+               <h3>Image Title</h3>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+           </div>
+        </div>
+    </div>
+    <!-- Footer section -->
+     <footer id="footer" class="footer">
+        <p>&copy: 2024 xyzblog. All right reserved</p>
+     </footer>
+     <script>
+        document.querySelectorAll('.navbar a').forEach(anchor =>{
+            anchor.addEventListener('click', function(e){
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+     </script>
+</body>
+</html>
