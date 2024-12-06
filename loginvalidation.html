@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validation Form</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login Validation Form</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="middleName">Middle Name</label>
+                <input type="text" id="middleName" name="middleName">
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="[0-9]{10}">
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <small class="error-message"></small>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    const firstName = document.getElementById("firstName");
+    const lastName = document.getElementById("lastName");
+    const phoneNumber = document.getElementById("phoneNumber");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+
+    let isValid = true;
+
+    // Helper function to show error
+    function showError(input, message) {
+        const errorElement = input.nextElementSibling;
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+        isValid = false;
+    }
+
+    // Helper function to clear error
+    function clearError(input) {
+        const errorElement = input.nextElementSibling;
+        errorElement.style.display = "none";
+    }
+
+    // Validation logic
+    if (!firstName.value.trim()) {
+        showError(firstName, "First name is required");
+    } else {
+        clearError(firstName);
+    }
+
+    if (!lastName.value.trim()) {
+        showError(lastName, "Last name is required");
+    } else {
+        clearError(lastName);
+    }
+
+    if (!phoneNumber.value.match(/^\d{10}$/)) {
+        showError(phoneNumber, "Phone number must be 10 digits");
+    } else {
+        clearError(phoneNumber);
+    }
+
+    if (!email.value.trim() || !email.value.includes("@")) {
+        showError(email, "Valid email is required");
+    } else {
+        clearError(email);
+    }
+
+    if (password.value.length < 6) {
+        showError(password, "Password must be at least 6 characters");
+    } else {
+        clearError(password);
+    }
+
+    if (password.value !== confirmPassword.value) {
+        showError(confirmPassword, "Passwords do not match");
+    } else {
+        clearError(confirmPassword);
+    }
+
+    if (isValid) {
+        alert("Form submitted successfully!");
+        // Add form submission logic here
+    }
+});
+
+    </script>
+</body>
+</html>
