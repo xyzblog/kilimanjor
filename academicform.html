@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Information Form</title>
+  <style>
+    /* Stylesheet for Academic Information Form */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  margin: 2em auto;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+button {
+  background: #007BFF;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+input:focus, select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+  </style>
+</head>
+<body>
+  <form id="academicForm">
+    <label for="institution">Name of Institution:</label>
+    <select id="institution" name="institution" required>
+      <option value="">--Select Institution--</option>
+      <option value="University A">University A</option>
+      <option value="University B">University B</option>
+      <option value="other">Other</option>
+    </select>
+    <br>
+
+    <label for="admissionYear">Year of Admission:</label>
+    <select id="admissionYear" name="admissionYear" required>
+      <script>
+        const year = new Date().getFullYear();
+        for (let i = 2000; i <= year; i++) {
+          document.write(`<option value="${i}">${i}</option>`);
+        }
+      </script>
+    </select>
+    <br>
+
+    <label for="currentLevel">Current Level:</label>
+    <select id="currentLevel" name="currentLevel" required>
+      <option value="">--Select Level--</option>
+      <option value="Freshman">Freshman</option>
+      <option value="Sophomore">Sophomore</option>
+      <option value="Junior">Junior</option>
+      <option value="Senior">Senior</option>
+      <option value="Master's">Master's</option>
+      <option value="PhD">PhD</option>
+    </select>
+    <br>
+
+    <label for="graduationYear">Expected Year of Graduation:</label>
+    <select id="graduationYear" name="graduationYear" required>
+      <script>
+        for (let i = year; i <= year + 10; i++) {
+          document.write(`<option value="${i}">${i}</option>`);
+        }
+      </script>
+    </select>
+    <br>
+
+    <label for="course">Course of Study:</label>
+    <select id="course" name="course" required>
+      <option value="">--Select Course--</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Medicine">Medicine</option>
+      <option value="Business">Business</option>
+      <option value="other">Other</option>
+    </select>
+    <br>
+
+    <label for="cgpa">Current Cumulative Grade Point Average:</label>
+    <input type="number" id="cgpa" name="cgpa" min="0" max="4" step="0.01" required>
+    <br>
+
+    <label for="files">Upload Academic Files (PDF, Max 5MB each):</label>
+    <input type="file" id="files" name="files" accept=".pdf" required multiple>
+    <br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('academicForm').addEventListener('submit', function (e) {
+  let hasErrors = false;
+
+  // Clear previous error messages
+  document.querySelectorAll('.error-message').forEach(el => el.remove());
+
+  // Validate Name of Institution
+  const institution = document.getElementById('institution');
+  if (!institution.value) {
+    showError(institution, 'Please select your institution.');
+    hasErrors = true;
+  }
+
+  // Validate Year of Admission
+  const admissionYear = document.getElementById('admissionYear');
+  if (!admissionYear.value) {
+    showError(admissionYear, 'Please select your year of admission.');
+    hasErrors = true;
+  }
+
+  // Validate Current Level
+  const currentLevel = document.getElementById('currentLevel');
+  if (!currentLevel.value) {
+    showError(currentLevel, 'Please select your current level.');
+    hasErrors = true;
+  }
+
+  // Validate Expected Year of Graduation
+  const graduationYear = document.getElementById('graduationYear');
+  if (!graduationYear.value || graduationYear.value <= admissionYear.value) {
+    showError(graduationYear, 'Expected graduation year must be after the admission year.');
+    hasErrors = true;
+  }
+
+  // Validate Current Cumulative GPA
+  const cgpa = document.getElementById('cgpa');
+  if (!cgpa.value || cgpa.value < 0 || cgpa.value > 4) {
+    showError(cgpa, 'Please enter a valid CGPA between 0.0 and 4.0.');
+    hasErrors = true;
+  }
+
+  // Validate File Upload
+  const files = document.getElementById('files').files;
+  if (files.length === 0) {
+    showError(document.getElementById('files'), 'Please upload at least one academic file.');
+    hasErrors = true;
+  } else {
+    for (let file of files) {
+      if (file.size > 5 * 1024 * 1024) {
+        showError(document.getElementById('files'), `File ${file.name} exceeds 5MB size limit.`);
+        hasErrors = true;
+      }
+    }
+  }
+
+  // Prevent form submission if there are errors
+  if (hasErrors) e.preventDefault();
+});
+
+// Function to show error messages
+function showError(element, message) {
+  const error = document.createElement('div');
+  error.className = 'error-message';
+  error.textContent = message;
+  element.parentElement.appendChild(error);
+}
+
+  </script>
+</body>
+</html>
