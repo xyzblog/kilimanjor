@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Image Slider</title>
+    <style>
+        /* Container for the image slider */
+        .slider-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* The image slides */
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 400px; /* You can adjust the height as per your requirement */
+            object-fit: cover;
+        }
+
+        /* Previous and Next buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <!-- The image slides -->
+        <div class="slides">
+            <img src="IMG_20241030_074128_693.jpg" alt="Image 1" class="slide" width="400px" height="400px">
+            <img src="0ccbe28b-5389-4036-a793-f4477b1d0082_0_watermark.jpeg" alt="Image 2" class="slide" width="400px" height="400px">
+            <img src="IMG_20241110_123415_594.jpg" alt="Image 3" class="slide" width="400px" height="400px">
+        </div>
+
+        <!-- Previous and Next buttons -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentSlide = (currentSlide + step + totalSlides) % totalSlides; // Loop through slides
+            const offset = -currentSlide * 100; // Move slides left or right
+            slides.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+
+</body>
+</html>
+
+</body>
+</html>
