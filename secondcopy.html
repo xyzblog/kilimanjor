@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Assistant Website</title>
+  <style>
+    /* General Reset */
+body, h1, h2, h3, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.hero-text p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.hero-text button {
+  padding: 0.5rem 1.5rem;
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.sliding-images {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem auto;
+}
+
+.sliding-images img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.overlay-image {
+  position: none;
+  top: 10%;
+  right: 5%;
+  z-index: 10;
+  width: 150px;
+}
+
+/* Services Section */
+.services {
+  padding: 3rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.services .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+  text-align: left;
+}
+
+/* How It Works Section */
+.how-it-works {
+  position: relative;
+  padding: 3rem 2rem;
+  background: #e9e1fc;
+  text-align: center;
+}
+
+.purple-card {
+  background: #6200ea;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.purple-card ol {
+  margin: 1rem 0;
+}
+
+.purple-card li {
+  margin: 1rem 0;
+  position: relative;
+}
+
+.purple-card li::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 0.5rem;
+}
+
+/* Footer Section */
+.footer {
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+}
+
+.footer .card {
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Best Virtual Assistant For Your Business</h1>
+      <p>We help you tackle every task with professionalism and efficiency.</p>
+      <button>Request Assistance</button>
+    </div>
+    <div class="sliding-images">
+      <img src="image1.jpg" alt="Slide 1">
+      <img src="image2.jpg" alt="Slide 2">
+      <img src="image3.jpg" alt="Slide 3">
+    </div>
+    <div class="info-card">
+      <h2>Why Choose Us</h2>
+      <p>Your one-stop solution for business efficiency.</p>
+      <hr>
+      <h3>Our Features</h3>
+      <div class="emojis">
+        😀 😎 🚀 📊 📞
+      </div>
+    </div>
+    <img src="overlay-image.jpg" class="overlay-image" alt="Professional">
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Services We Provide</h2>
+    <p>We cover a wide range of business needs.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="service-icon1.png" alt="Service Icon">
+        <h3>Writing & Editing</h3>
+        <p>We provide excellent content services.</p>
+      </div>
+      <!-- Add five more similar cards here -->
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="purple-card">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Describe your needs.</li>
+        <li>Receive tailored assistance.</li>
+        <li>Launch your success.</li>
+      </ol>
+      <button>Get Started</button>
+    </div>
+    <div class="sliding-images">
+      <img src="step1.jpg" alt="Step 1">
+      <img src="step2.jpg" alt="Step 2">
+      <img src="step3.jpg" alt="Step 3">
+      <img src="step4.jpg" alt="Step 4">
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="card">
+      <h3>Get in Touch</h3>
+      <p>Contact us today to boost your productivity.</p>
+      <button>Contact Us</button>
+    </div>
+    <!-- Add two more cards with similar structure -->
+  </footer>
+
+  <script>
+    // JavaScript for Sliding Images
+const images = document.querySelectorAll('.sliding-images img');
+let current = 0;
+
+function slideImages() {
+  images.forEach((img, index) => {
+    img.style.display = index === current ? 'block' : 'none';
+  });
+  current = (current + 1) % images.length;
+}
+
+setInterval(slideImages, 3000);
+
+  </script>
+</body>
+</html>

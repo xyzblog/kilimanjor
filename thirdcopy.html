@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Management Consulting Services</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <style>
+    /* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 20px;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider img {
+  width: 100px;
+  display: block;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #000;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background: #6C63FF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Quality Consulting Section */
+.quality-consulting {
+  background: #f8f8f8;
+  padding: 20px;
+  position: relative;
+}
+
+.watermark {
+  font-size: 5rem;
+  color: #f0f0f0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Services Section */
+.services{
+  background-color: blue;
+}
+.services .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #6C63FF;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Final Section */
+.final-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.with-slider {
+  flex: 1;
+}
+
+.with-slider .slider-container {
+  overflow: hidden;
+}
+
+.with-slider .slider img {
+  width: 100px;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Section 1 -->
+  <section class="hero-section">
+    <div class="slider-container">
+      <div class="slider">
+        <img src="building img1.png" alt="Slide 1">
+        <img src="building img2.jpg" alt="Slide 2">
+        <img src="image3.jpg" alt="Slide 3">
+        <img src="image4.jpg" alt="Slide 4">
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <h1>Our Management Consulting Services</h1>
+      <div class="cards">
+        <div class="card">
+          <h3>Service One</h3>
+          <p>Details about the first service offered.</p>
+          <button>Read More</button>
+        </div>
+        <div class="card">
+          <h3>Service Two</h3>
+          <p>Details about the second service offered.</p>
+          <button>Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="quality-consulting">
+    <div class="card">
+      <h2>Quality Consulting</h2>
+      <p>Our experts know how to solve your company’s issues.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <button>Learn More</button>
+      <div class="watermark">✔</div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="services">
+    <h2>What Does We Do?</h2>
+    <p>We offer a range of services tailored to your needs.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="circle">01</div>
+        <h3>Call Service</h3>
+        <p>Details about this feature or service.</p>
+      </div>
+      <div class="card">
+        <div class="circle">02</div>
+        <h3>Your Strategy</h3>
+        <p>Details about this feature or service.</p>
+      </div>
+      <div class="card">
+        <div class="circle">03</div>
+        <h3>Team Building</h3>
+        <p>Details about this feature or service.</p>
+      </div>
+      <div class="card">
+        <div class="circle">04</div>
+        <h3>Premium Plan</h3>
+        <p>Details about this feature or service.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="final-section">
+    <div class="card with-slider">
+      <h2>Consulting Services</h2>
+      <p>We’re here to provide you with expert advice and support.</p>
+      <button>Explore More</button>
+      <div class="slider-container">
+        <div class="slider">
+          <img src="image5.jpg" alt="Slide 5">
+          <img src="image6.jpg" alt="Slide 6">
+          <img src="image7.jpg" alt="Slide 7">
+          <img src="image8.jpg" alt="Slide 8">
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>#1</h3>
+      <p>Detailed description of the first priority.</p>
+    </div>
+    <div class="card">
+      <h3>#2</h3>
+      <p>Detailed description of the second priority.</p>
+    </div>
+  </section>
+
+  <script>const sliders = document.querySelectorAll('.slider');
+
+    sliders.forEach(slider => {
+      let index = 0;
+      const images = slider.querySelectorAll('img');
+      
+      setInterval(() => {
+        images.forEach((img, i) => {
+          img.style.transform = `translateX(${(i - index) * 100}%)`;
+        });
+        index = (index + 1) % images.length;
+      }, 3000);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Assistant Service</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #6C63FF;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header Section */
+.header-section {
+  padding: 2em;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.text-content {
+  max-width: 600px;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.purple-background {
+  background-color: #6C63FF;
+  color: white;
+  padding: 2em;
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+}
+
+.emojis {
+  display: flex;
+  gap: 1em;
+  font-size: 1.5em;
+}
+
+/* Services Section */
+.services-section {
+  padding: 2em;
+  background-color: #f1f1f1;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.card {
+  background: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card .icon {
+  font-size: 2em;
+}
+
+/* How It Works */
+.how-it-works {
+  background: #6C63FF;
+  color: white;
+  padding: 2em;
+}
+
+.how-it-works ol {
+  list-style: none;
+  padding: 0;
+}
+
+.how-it-works li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.how-it-works li span {
+  background: white;
+  color: #6C63FF;
+  border-radius: 50%;
+  padding: 0.5em 1em;
+}
+
+/* Footer */
+.footer {
+  background: #f8f8f8;
+  padding: 2em;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">LOGO</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <section class="header-section">
+    <div class="text-content">
+      <h1>Best Virtual Assistant For Your Business</h1>
+      <p>Let us handle your daily tasks while you focus on growth and success.</p>
+      <button>Request Assistance</button>
+    </div>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+      </div>
+      <div class="purple-background">
+        <h2>Why Choose Us?</h2>
+        <p>We ensure every task is tackled with precision.</p>
+        <hr>
+        <h3>Our Expertise</h3>
+        <div class="emojis">
+          😊 👍 🚀 📝 💻
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <h2>Services We Provide</h2>
+    <p>Explore our tailored services to meet your business needs.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📜</div>
+        <h3>Writing & Editing</h3>
+        <p>High-quality content creation and editing services.</p>
+        <footer>Learn More</footer>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Digital Marketing</h3>
+        <p>Strategies to grow your online presence effectively.</p>
+        <footer>Learn More</footer>
+      </div>
+      <!-- Add four more similar cards -->
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="purple-card">
+      <div class="slider-container">
+        <div class="slider">
+          <img src="image4.jpg" alt="Image 4">
+          <img src="image5.jpg" alt="Image 5">
+          <img src="image6.jpg" alt="Image 6">
+        </div>
+      </div>
+      <h2>How It Works</h2>
+      <ol>
+        <li><span>1</span> Contact us with your requirements.</li>
+        <li><span>2</span> Get personalized support.</li>
+        <li><span>3</span> Launch and succeed!</li>
+      </ol>
+      <button>Get Started</button>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="cards">
+      <div class="card">
+        <h3>Dedicated Support</h3>
+        <p>We’re here to help you every step of the way.</p>
+        <button>Learn More</button>
+      </div>
+      <div class="card">
+        <div class="slider-container">
+          <div class="slider">
+            <img src="image7.jpg" alt="Image 7">
+            <img src="image8.jpg" alt="Image 8">
+            <img src="image9.jpg" alt="Image 9">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Slider functionality
+const sliders = document.querySelectorAll('.slider');
+
+sliders.forEach(slider => {
+  let index = 0;
+  const images = slider.querySelectorAll('img');
+  
+  setInterval(() => {
+    images.forEach(img => img.style.display = 'none');
+    images[index].style.display = 'block';
+    index = (index + 1) % images.length;
+  }, 3000);
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulting Services</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <style>
+    /* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.header-content {
+  text-align: center;
+  color: #000;
+}
+
+.header-img {
+  width: 100%;
+  max-height: 50vh;
+  object-fit: none;
+}
+
+.header-text {
+  margin-top: -20vh;
+}
+
+.header-buttons .btn {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Quality Consulting Section */
+.quality-consulting {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.quality-consulting .watermark {
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.quality-consulting * {
+  position: relative;
+  z-index: 1;
+}
+
+/* What Does We Do Section */
+.services {
+  background-color: #0056b3;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+}
+
+/* Consulting Services Section */
+.consulting-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+}
+
+.consulting-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.text-block {
+  text-align: center;
+}
+
+.profile img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-content">
+      <div class="first-img" id="first-img">
+      <img src="building img1.png" alt="Building Image" class="header-img">
+    </div>
+    <div class="hero-content">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+      <div class="header-text">
+        <h1>Our Management Consulting Services</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="header-buttons">
+          <button class="btn">Read More</button>
+          <button class="btn">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quality Consulting Section -->
+  <section class="quality-consulting">
+    <h2>Quality Consulting</h2>
+    <p>Our experts know how to solve your company’s issues. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <button class="btn">Learn More</button>
+    <div class="watermark">Quality</div>
+  </section>
+
+  <!-- What Does We Do Section -->
+  <section class="services">
+    <h2>What Does We Do?</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="circle">01</div>
+        <h3>Call Service</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="grid-item">
+        <div class="circle">02</div>
+        <h3>Your Strategy</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="grid-item">
+        <div class="circle">03</div>
+        <h3>Team Building</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="grid-item">
+        <div class="circle">04</div>
+        <h3>Premium Plan</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consulting Services Section -->
+  <section class="consulting-services">
+    <div class="consulting-container">
+      <div class="text-block">
+        <h2>#1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="text-block">
+        <h2>#2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="profile">
+        <img src="building img2.jpg" alt="Consultant">
+        <p>Our expert consultant.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // scripts.js
+
+// Ensure DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Smooth scrolling for buttons
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', event => {
+      const sectionId = event.target.getAttribute('data-target');
+      if (sectionId) {
+        const targetSection = document.querySelector(sectionId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+  // Toggle visibility of sections (if applicable)
+  const toggleButtons = document.querySelectorAll('[data-toggle]');
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-toggle');
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.classList.toggle('hidden');
+      }
+    });
+  });
+});
+
+// Example functionality: Log a message when clicking header buttons
+document.querySelectorAll('.header-buttons .btn').forEach(button => {
+  button.addEventListener('click', () => {
+    console.log('Header button clicked!');
+  });
+});
+
+  </script>
+</body>
+</html>
