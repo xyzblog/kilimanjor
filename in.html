@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting Services</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-content .btn {
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Quality Consulting */
+.quality-consulting {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f9f9f9;
+}
+
+.quality-consulting .btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    background: #007BFF;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    color: #333;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+/* Consulting Services */
+.consulting-services {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+
+.highlight {
+    flex: 1;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Our management consulting services</h1>
+            <div class="hero-buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </header>
+    <section class="quality-consulting">
+        <h2>Quality Consulting</h2>
+        <p>Our experts know how to solve your company’s issues...</p>
+        <a href="#" class="btn">Explore More</a>
+    </section>
+    <section class="services">
+        <h2>What Does We Do?</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Call Service</h3>
+                <p>Description...</p>
+            </div>
+            <div class="card">
+                <h3>Your Strategy</h3>
+                <p>Description...</p>
+            </div>
+            <div class="card">
+                <h3>Team Building</h3>
+                <p>Description...</p>
+            </div>
+            <div class="card">
+                <h3>Premium Plan</h3>
+                <p>Description...</p>
+            </div>
+        </div>
+    </section>
+    <section class="consulting-services">
+        <div class="highlight">
+            <img src="person.jpg" alt="Consulting Expert">
+            <h3>#1 Consulting</h3>
+        </div>
+        <div class="highlight">
+            <h3>#2 Expert Solutions</h3>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Consulting Services</p>
+    </footer>
+</body>
+</html>

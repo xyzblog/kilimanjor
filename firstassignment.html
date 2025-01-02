@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Assistant Website</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: min-content;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.hero {
+  background-color: purple;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.cta-button {
+  background-color: white;
+  color: purple;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.stats {
+  margin: 1rem 0;
+}
+
+.slider {
+  margin-top: 2rem;
+}
+
+.services {
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.how-it-works {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: purple;
+  color: white;
+  padding: 2rem;
+}
+
+.final-section {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.overlay-card {
+    align-items: end;
+  position: relative;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: purple;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  z-index: 3;
+}
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-it-works {
+    flex-direction: column;
+  }
+
+  .final-section {
+    flex-direction: column;
+  }
+
+  .overlay-card {
+    position: absolute;
+    margin-top: 1rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Logo</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h3>Best Virtual Assistant For Your Business</h3>
+      <p>Your tasks, done better, faster, smarter!</p>
+      <button class="cta-button">Request Assistance</button>
+      <div class="stats">
+        <div><img src="reviews.png" alt="Reviews"> 66,738 Happy Customers</div>
+        <div><img src="rating.png" alt="Rating"> 4.8/5</div>
+      </div>
+      <div class="slider">
+        <h3>Testimonials</h3>
+        <p>"Amazing service!"</p>
+        <h3>"Reliable and quick!"</h3>
+        <p>"Highly recommended!"</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <h3>Services We Provide</h3>
+    <p>Explore the variety of services designed to support your business goals.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <i class="icon">✍️</i>
+        <h4>Writing & Editing</h4>
+        <p>Professional content and editing support for your needs.</p>
+      </div>
+      <div class="service-card">
+        <i class="icon">📢</i>
+        <h4>Digital Marketing</h4>
+        <p>Boost your online presence with effective strategies.</p>
+      </div>
+      <div class="service-card">
+        <i class="icon">📱</i>
+        <h4>Social Media Strategy</h4>
+        <p>Grow your brand with expert social media management.</p>
+      </div>
+      <div class="service-card">
+        <i class="icon">👩‍💻</i>
+        <h4>Executive Admin</h4>
+        <p>Get seamless administrative support for your tasks.</p>
+      </div>
+      <div class="service-card">
+        <i class="icon">📈</i>
+        <h4>Project Management</h4>
+        <p>Streamline your projects with expert management tools.</p>
+      </div>
+      <div class="service-card">
+        <i class="icon">📞</i>
+        <h4>Customer Service</h4>
+        <p>Exceptional support for your clients and customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="content">
+      <h2>How It Works</h2>
+      <ol>
+        <li>
+          <h5>1. Tell us your task</h5>
+          <p>Let us know what you need, and we’ll assign the best assistant.</p>
+        </li>
+        <li>
+          <h5>2. Meet your assistant</h5>
+          <p>Collaborate with a dedicated expert to complete your task.</p>
+        </li>
+        <li>
+          <h5>3. Launch and relax</h5>
+          <p>Enjoy exceptional results and save your time for other priorities.</p>
+        </li>
+      </ol>
+    </div>
+    <div class="image"><img src="process.jpg" alt="How It Works"></div>
+  </section>
+
+  <section class="final-section">
+    <div class="content">
+      <div class="card">
+        <h3>Every Task Tackled.</h3>
+        <p>Leave no stone unturned with our services.</p>
+        <button class="cta-button">Learn More</button>
+      </div>
+      <div class="image"><img src="img_tmp_tag1731484740967-1-1.jpg" alt="Expert Services"></div>
+      <div class="overlay-card">
+        <h3>Every Challenge Checked.</h3>
+        <p>Your business goals are our top priority.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Add interactivity if needed (e.g., slider functionality, button click events)
+document.querySelector(".cta-button").addEventListener("click", () => {
+  alert("Thank you for your interest!");
+});
+
+  </script>
+</body>
+</html>

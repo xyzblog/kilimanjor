@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant Services</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #6c63ff;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        header {
+            background-color: #6c63ff;
+            color: #fff;
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        .hero-text p {
+            margin: 10px 0 20px;
+            font-size: 1.2rem;
+        }
+
+        .btn-primary {
+            background-color: #fff;
+            color: #6c63ff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #ddd;
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 50%;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .services h2 {
+            margin-bottom: 20px;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            color: #6c63ff;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+            background: #f9f9ff;
+        }
+
+        .how-it-works img {
+            max-width: 50%;
+            height: auto;
+        }
+
+        .how-it-works .steps {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .steps h2 {
+            margin-bottom: 20px;
+        }
+
+        .steps p {
+            margin-bottom: 10px;
+        }
+
+        .btn-secondary {
+            background-color: #6c63ff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #6c63ff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Virtual Assistant</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="hero-text">
+            <h1>Best Virtual Assistant Services</h1>
+            <p>Your Business, Our Expertise</p>
+            <a href="#" class="btn-primary">Get Started</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/500" alt="Virtual Assistant Illustration">
+        </div>
+    </header>
+
+    <section class="services" id="services">
+        <h2>Services We Provide</h2>
+        <div class="services-container">
+            <div class="service">
+                <img src="https://via.placeholder.com/50" alt="Writing Icon">
+                <h3>Writing & Editing</h3>
+                <p>Professional content creation and proofreading services.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/50" alt="Marketing Icon">
+                <h3>Digital Marketing</h3>
+                <p>Boost your online presence with tailored strategies.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/50" alt="Social Media Icon">
+                <h3>Social Media Strategy</h3>
+                <p>Engage your audience with optimized social content.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/50" alt="Admin Icon">
+                <h3>Executive Admin</h3>
+                <p>Efficient scheduling and email management.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/50" alt="Project Management Icon">
+                <h3>Project Management</h3>
+                <p>Streamline your workflow with expert oversight.</p>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/50" alt="Customer Service Icon">
+                <h3>Customer Service</h3>
+                <p>Build trust with outstanding client support.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <img src="https://via.placeholder.com/500" alt="Virtual Assistant">
+        <div class="steps">
+            <h2>How It Works</h2>
+            <p><strong>Step 1:</strong> Tell us about your needs and goals.</p>
+            <p><strong>Step 2:</strong> We match you with the right assistant.</p>
+            <p><strong>Step 3:</strong> Launch and watch your tasks get done.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Virtual Assistant Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
